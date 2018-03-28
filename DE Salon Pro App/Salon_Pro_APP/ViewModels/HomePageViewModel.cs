@@ -11,8 +11,11 @@ namespace Salon_Pro_APP.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public List<Data> DataSourceList;
+        private string _backgroundColor;
+
         public HomePageViewModel()
         {
+            BackgroundColor = ApplicationConstant.BackgroundColor;
             DataSourceList = new List<Data>();
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link1MenuTitle, ImagePath = ApplicationConstant.Link1MenuIcon });
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link2MenuTitle, ImagePath = ApplicationConstant.Link2MenuIcon });
@@ -22,6 +25,16 @@ namespace Salon_Pro_APP.ViewModels
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link6MenuTitle, ImagePath = ApplicationConstant.Link6MenuIcon });
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link7MenuTitle, ImagePath = ApplicationConstant.Link7MenuIcon });
           
+        }
+
+        public string BackgroundColor
+        {
+            get { return _backgroundColor; }
+            set
+            {
+                _backgroundColor = value;
+                OnPropertyChanged("BackgroundColor");
+            }
         }
 
         /// <summary>

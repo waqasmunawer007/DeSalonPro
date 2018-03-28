@@ -3,8 +3,12 @@ namespace Salon_Pro_APP.Constants
 {
     public class ApplicationConstant
     {
+
+        public static string BackgroundColor = "#f4dc42";
+
+
         #region URLs
-        public static string Link1URL = "https://desalonpro.com/";
+        public static string Link1URL    =    "https://desalonpro.com/";
         public static string Link2WebUrl = "https://desalonpro.com/videos/";
         public static string Link3WebUrl = "https://desalonpro.com/classes-and-events/";
         public static string Link4WebUrl = "https://desalonpro.com/educators/";

@@ -10,12 +10,15 @@ namespace Salon_Pro_APP.ViewModels
         private bool _isBusy;
         private string _webURL;
         private string _title;
+        private string _backgroundColor;
 
         public Link5ViewModel()
         {
             WebURL = ApplicationConstant.Link5WebUrl;
             IsBusy = true;
             Title = ApplicationConstant.Link5MenuTitle;
+             BackgroundColor = ApplicationConstant.BackgroundColor;
+        
         }
         #region Properties
         public bool IsBusy
@@ -34,6 +37,15 @@ namespace Salon_Pro_APP.ViewModels
             {
                 _title = value;
                 OnPropertyChanged("Title");
+            }
+        }
+        public string BackgroundColor
+        {
+            get { return _backgroundColor; }
+            set
+            {
+                _backgroundColor = value;
+                OnPropertyChanged("BackgroundColor");
             }
         }
         public string WebURL

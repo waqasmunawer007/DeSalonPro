@@ -9,7 +9,6 @@
         <Setter Property="BarTextColor" Value="White"/>
       </Style>
       <!-- Styles -->
-
     </ResourceDictionary> 
     </Application.Resources>
 </Application>

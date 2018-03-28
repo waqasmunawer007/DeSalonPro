@@ -4,9 +4,9 @@
     xmlns:local="clr-namespace:Salon_Pro_APP.CustomRenderers"
     x:Class="Salon_Pro_APP.Views.Link_4">
 	<AbsoluteLayout>
-        <Image Source="homebackground.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill" />
+         <StackLayout BackgroundColor="{Binding BackgroundColor}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  />
 
-        <local:HybridWebView x:Name="hybridWebView" Uri="{Binding WebURL}"
+        <local:HybridWebView BackgroundColor="{Binding BackgroundColor}" x:Name="hybridWebView" Uri="{Binding WebURL}"
           HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1"
             AbsoluteLayout.LayoutFlags="All" VerticalOptions="FillAndExpand" />
 

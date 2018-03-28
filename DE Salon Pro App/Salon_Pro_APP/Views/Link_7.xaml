@@ -6,9 +6,9 @@
      x:Class="Salon_Pro_APP.Views.Link_7">
     <ContentPage.Content>
         <AbsoluteLayout>
-        <Image Source="homebackground.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill" />
+         <StackLayout BackgroundColor="{Binding BackgroundColor}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  />
 
-        <local:HybridWebView x:Name="hybridWebView" Uri="{Binding WebUrl}"
+        <local:HybridWebView BackgroundColor="{Binding BackgroundColor}" x:Name="hybridWebView" Uri="{Binding WebUrl}"
           HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1"
             AbsoluteLayout.LayoutFlags="All" VerticalOptions="FillAndExpand" />
 
