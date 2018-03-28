@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Salon_Pro_APP.Views.HomePage" MasterBehavior="Popover" xmlns:Views="clr-namespace:Salon_Pro_APP.Views;assembly=Salon_Pro_APP">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu Page" Icon="hamburger.png">
+            <AbsoluteLayout>
+                <Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Source="menu_background.png" Aspect="Fill" />
+                <Image AbsoluteLayout.LayoutBounds="0.5,0.1,1,0.2" AbsoluteLayout.LayoutFlags="All" Source="branding.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Handle_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <ListView ItemSelected="Handle_ItemSelected" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,1.58,1,0.8" AbsoluteLayout.LayoutFlags="All" x:Name="mlist" SeparatorVisibility="None" HasUnevenRows="true" VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid BackgroundColor="Transparent" Margin="0,0,0,2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" Margin="7,10,0,10" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                            <Image WidthRequest="30" HeightRequest="30" Source="{Binding ImagePath}" />
+                                            <Label Text="{Binding Title}" TextColor="White" FontSize="20" />
+                                        </StackLayout>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label TextColor="White" FontSize="12" Text="Designed by Salon Media22,LLC" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,1,1,0.05" AbsoluteLayout.LayoutFlags="All" />
+            </AbsoluteLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage BarBackgroundColor="#4E1E50" BarTextColor="White" BackgroundColor="#4E1E50">
+            <x:Arguments>
+                <Views:Link_1 />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
