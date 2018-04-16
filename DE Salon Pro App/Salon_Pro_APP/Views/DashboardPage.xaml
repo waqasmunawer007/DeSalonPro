@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="{Binding MainTitle}"
+             x:Class="Salon_Pro_APP.Views.DashboardPage">
+    <ContentPage.Content>
+       <ScrollView>
+          <AbsoluteLayout>
+                
+                <Image Source="{Binding BackgroundImage}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill" />
+                <Grid RowSpacing="-15.0" ColumnSpacing="15.0" Margin="10,20,10,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="*" />
+                          <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                            <StackLayout  Grid.Column="0" Grid.Row="0"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                     <Image  Source="{Binding Link1Image}" Aspect="AspectFit" WidthRequest="200" HeightRequest="200">
+                                     <Image.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding Link1Command}" />
+                                </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+
+                            <StackLayout  Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                              <Image  Source="{Binding Link2Image}" Aspect="AspectFit" WidthRequest="200" HeightRequest="200">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link2Command}" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                              
+                            </StackLayout>
+
+                            <StackLayout  Grid.Column="0" Grid.Row="1"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image  Source="{Binding Link3Image}" Aspect="AspectFit" WidthRequest="200" HeightRequest="200">
+                                     <Image.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link3Command}" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                </StackLayout>
+
+                            <StackLayout  Grid.Column="1" Grid.Row="1"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image  Source="{Binding Link4Image}" Aspect="AspectFit" WidthRequest="200" HeightRequest="200">
+                                     <Image.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link4Command}" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+
+                            <StackLayout  Grid.Column="0" Grid.Row="2"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image  Source="{Binding Link5Image}" Aspect="AspectFit" WidthRequest="200" HeightRequest="200">
+                                     <Image.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link5Command}" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+
+                            <StackLayout  Grid.Column="1" Grid.Row="2"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image  Source="{Binding Link6Image}" Aspect="AspectFit" WidthRequest="200" HeightRequest="200">
+                                    <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link6Command}" />
+                                </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+
+                             <StackLayout  Grid.Column="0" Grid.Row="3"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                 <Image  Source="{Binding Link7Image}" WidthRequest="200" HeightRequest="200">
+                                    <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link7Command}" />
+                                </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+                                               
+                        </Grid>
+               
+            </AbsoluteLayout>
+            </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

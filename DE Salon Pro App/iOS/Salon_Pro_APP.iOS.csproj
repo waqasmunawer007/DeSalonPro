@@ -127,6 +127,12 @@
     <Reference Include="FFImageLoading.Transformations">
       <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.3.4\lib\Xamarin.iOS10\FFImageLoading.Transformations.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.1.1\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.1.1\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Salon_Pro_APP\Salon_Pro_APP.csproj">
@@ -197,6 +203,12 @@
     <BundleResource Include="Resources\selectbutton.png" />
     <BundleResource Include="Resources\location_icon.png" />
     <BundleResource Include="Resources\avatarbg.png" />
+    <BundleResource Include="Resources\home_image_holder_1.png" />
+    <BundleResource Include="Resources\home_image_holder_2.png" />
+    <BundleResource Include="Resources\home_image_holder_3.png" />
+    <BundleResource Include="Resources\home_image_holder_4.png" />
+    <BundleResource Include="Resources\home_image_holder_5.png" />
+    <BundleResource Include="Resources\home_image_holder_6.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

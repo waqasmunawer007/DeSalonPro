@@ -9,7 +9,7 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Handle_Tapped" />
                     </Image.GestureRecognizers>
                 </Image>
-                <ListView ItemSelected="Handle_ItemSelected" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,1.58,1,0.8" AbsoluteLayout.LayoutFlags="All" x:Name="mlist" SeparatorVisibility="None" HasUnevenRows="true" VerticalOptions="FillAndExpand">
+                <ListView ItemSelected="Handle_ItemSelected" Margin="0,0,0,100" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,1.58,1,0.8" AbsoluteLayout.LayoutFlags="All" x:Name="mlist" SeparatorVisibility="None" HasUnevenRows="true" VerticalOptions="FillAndExpand">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -31,14 +31,14 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Label TextColor="White" FontSize="12" Text="Designed by Salon Media22,LLC" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,1,1,0.05" AbsoluteLayout.LayoutFlags="All" />
+              <Label TextColor="White" FontSize="12" Text="Designed by Salon Media22,LLC" HorizontalTextAlignment="Center" Margin="0,0,0,10" AbsoluteLayout.LayoutBounds="0.5,1,1,0.05" AbsoluteLayout.LayoutFlags="All" />
             </AbsoluteLayout>
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <Views:Link_1 />
+                <Views:DashboardPage />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

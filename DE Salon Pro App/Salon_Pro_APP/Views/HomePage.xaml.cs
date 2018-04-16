@@ -23,7 +23,8 @@ namespace Salon_Pro_APP.Views
         void Handle_Tapped(object sender, System.EventArgs e)
         {
           //  this.IsPresented = false;
-            Application.Current.MainPage = new HomePage() { Detail = new NavigationPage(new Link_1()) };
+            Application.Current.MainPage = new HomePage() { Detail = new NavigationPage(new DashboardPage()) };
+
         }
         void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
@@ -69,11 +70,10 @@ namespace Salon_Pro_APP.Views
             else if ((person.Title).Equals("Log Out"))
             {
                 IsPresented = false;
-               // Navigation.PushModalAsync(new OpenScreen());
             }
             else
             {
-                Detail = new NavigationPage(new Link_1());
+                Detail = new NavigationPage(new DashboardPage());
                 IsPresented = false;
             }
             mlist.SelectedItem = null;
