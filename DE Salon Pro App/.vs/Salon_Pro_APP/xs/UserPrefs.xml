@@ -1,16 +1,26 @@
 ﻿<Properties StartupConfiguration="{FA9819E5-FB5F-48D1-B72A-483AA0229A3D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Salon_Pro_APP/ViewModels/DashboardViewModel.cs">
     <Files>
       <File FileName="Salon_Pro_APP/Views/DashboardPage.xaml" Line="29" Column="41" />
-      <File FileName="iOS/AppDelegate.cs" Line="75" Column="95" />
+      <File FileName="Salon_Pro_APP/ViewModels/Link1ViewModel.cs" Line="1" Column="1" />
+      <File FileName="Salon_Pro_APP/ViewModels/DashboardViewModel.cs" Line="30" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Salon_Pro_APP" expanded="True">
-            <Node name="Salon_Pro_APP.iOS" expanded="True">
-              <Node name="AppDelegate.cs" selected="True" />
+            <Node name="Salon_Pro_APP" expanded="True">
+              <Node name="ViewModels" expanded="True">
+                <Node name="DashboardViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="DashboardPage.xaml" expanded="True" />
+              </Node>
             </Node>
+            <Node name="Salon_Pro_APP.Droid" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
+            <Node name="Salon_Pro_APP.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

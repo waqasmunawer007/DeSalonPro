@@ -27,7 +27,8 @@ namespace Salon_Pro_APP.ViewModels
             SetupLinks();
             Link1Command = new Command((e) =>
             {
-                _navigation.PushAsync(new Link_1());
+                Device.OpenUri(new Uri("tel:038773729"));
+                //_navigation.PushAsync(new Link_1());
 
             });
             Link2Command = new Command((e) =>
