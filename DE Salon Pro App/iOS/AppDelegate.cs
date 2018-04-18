@@ -24,12 +24,11 @@ namespace Salon_Pro_APP.iOS
             var ignore1 = typeof(CircleTransformation);
             global::Xamarin.Forms.Forms.Init();
             mainApplication = new App();
-            MessagingCenter.Subscribe<App, string>(mainApplication, "EmailEvent", (s, error) =>
+            MessagingCenter.Subscribe<App, string>(mainApplication, "EmailEvent", (s, data) =>
             {
-                SendFeedbackEmail(error);
+                SendFeedbackEmail(data);
             });
             LoadApplication(mainApplication);
-
             return base.FinishedLaunching(app, options);
         }
         public override void WillTerminate(UIApplication uiApplication)
@@ -38,7 +37,7 @@ namespace Salon_Pro_APP.iOS
             MessagingCenter.Unsubscribe<App, string>(mainApplication,"EmailEvent");
         }
 
-        private static void SendFeedbackEmail(string errorMessage)
+        private static void SendFeedbackEmail(string emailBody)
         {
             if (CrossConnectivity.Current.IsConnected)
             {
@@ -48,16 +47,16 @@ namespace Salon_Pro_APP.iOS
                     {
                         Port = ApplicationConstant.EmailPort,
                         Host = ApplicationConstant.EmailHost,
-                        EnableSsl = true,
+                        EnableSsl = false,
                         Timeout = ApplicationConstant.EmailTimeout,
                         DeliveryMethod = SmtpDeliveryMethod.Network,
                         UseDefaultCredentials = false,
                         Credentials = new System.Net.NetworkCredential(ApplicationConstant.EmailAddress, ApplicationConstant.EmailPassword)
                     };
-                    var mailAddress = new MailAddress(ApplicationConstant.EmailAddress, "IOS App");
+                    var mailAddress = new MailAddress(ApplicationConstant.EmailAddress, "IOS APP");
                     var mail = new MailMessage(mailAddress, mailAddress);
                     mail.Subject = ApplicationConstant.IPhoneFeedbackEmailSubject;
-                    mail.Body = "This is test email";
+                    mail.Body = emailBody;
                     mail.BodyEncoding = UTF8Encoding.UTF8;
                     mail.IsBodyHtml = true;
                     mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
@@ -66,14 +65,22 @@ namespace Salon_Pro_APP.iOS
                 }
                 catch (Exception ex)
                 {
-                    MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
-                    Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "Close");
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
+                        Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "Close");
+                    });
+                   
                 }
             }
             else
             {
-                MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
-                Xamarin.Forms.Application.Current.MainPage.DisplayAlert("No Internet!","Please check your internet settings and then try again.","Close");
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
+                    Xamarin.Forms.Application.Current.MainPage.DisplayAlert("No Internet!", "Please check your internet settings and then try again.", "Close");
+                });
+              
             }
 
         }

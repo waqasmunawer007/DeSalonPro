@@ -155,6 +155,12 @@
     <Reference Include="Xamarin.Android.Support.Core.Utils">
       <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Core.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Messaging.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Messaging.5.1.0\lib\MonoAndroid10\Plugin.Messaging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging">
+      <HintPath>..\packages\Xam.Plugins.Messaging.5.1.0\lib\MonoAndroid10\Plugin.Messaging.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Salon_Pro_APP\Salon_Pro_APP.csproj">
@@ -225,6 +231,8 @@
     <AndroidResource Include="Resources\drawable\home_image_holder_4.png" />
     <AndroidResource Include="Resources\drawable\home_image_holder_5.png" />
     <AndroidResource Include="Resources\drawable\home_image_holder_6.png" />
+    <AndroidResource Include="Resources\drawable\icon_call.png" />
+    <AndroidResource Include="Resources\drawable\icon_info.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

@@ -1,5 +1,140 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Salon_Pro_APP.Views.FeedbackPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+              xmlns:conv="clr-namespace:Salon_Pro_APP.Convertors"
+             x:Class="Salon_Pro_APP.Views.FeedbackPage">
+   
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:EmailValidationConvertor x:Key="EmailConverter"></conv:EmailValidationConvertor>
+            <conv:DataHasEnteredConvertor x:Key="DataHasBeenEnterdConverter"></conv:DataHasEnteredConvertor>
+            <Style TargetType="Label" x:Key="LableStyle">
+                <Setter Property="FontSize" Value="18"></Setter>
+                 <Setter Property="TextColor" Value="#BDBDBD"></Setter>
+            </Style>
+            <Style TargetType="Entry" x:Key="EntryStyle">
+               
+                 <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
+       
+       <!-- <AbsoluteLayout>-->
+         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+            <AbsoluteLayout>
+        <StackLayout 
+            Margin="15,10,15,50"
+            Orientation="Vertical" 
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,15,0,0" Orientation="Horizontal" >
+                    <Image HorizontalOptions="Center" Source="icon_call" HeightRequest="30" WidthRequest="30"></Image>
+                    <Label Text="{Binding PhoneNumber}"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Red" FontSize="22" HorizontalOptions="StartAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CallCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            <!-- Provide Feedback-->
+            <StackLayout
+                    HorizontalOptions="Fill"
+                    HeightRequest="50"
+                    BackgroundColor="#EEEEEE">
+                <Label
+                      Text="Provide Feedback"
+                      TextColor="Black"
+                      FontSize="18"
+                      Margin="15,0,0,0"
+                      VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="StartAndExpand">
+                </Label>
+            </StackLayout>
+            <Label HorizontalOptions="StartAndExpand"  Text="First Name" Style="{StaticResource LableStyle}"></Label>
+            <Entry HorizontalOptions="FillAndExpand"  Text="{Binding FirstName}" Style="{StaticResource EntryStyle}"></Entry>
+            <Label HorizontalOptions="StartAndExpand" Text="Last Name" Style="{StaticResource LableStyle}"></Label>
+            <Entry HorizontalOptions="FillAndExpand" Text="{Binding LastName}" Style="{StaticResource EntryStyle}"></Entry>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Label HorizontalOptions="Start" Text="Email" Style="{StaticResource LableStyle}"></Label>
+                    <Label HorizontalOptions="Start" Margin="-5,0,0,5" Text="*" TextColor="Red" HeightRequest="10" WidthRequest="10"></Label>
+            </StackLayout>
+                <Label 
+                    Text="Email Required"
+                    x:Name="emailError" 
+                    TextColor="Red"
+                    IsVisible="False">
+                    <Label.Triggers>
+                        <MultiTrigger TargetType="Label">
+                            <MultiTrigger.Conditions>
+                                <BindingCondition 
+                                         Binding="{Binding Source={x:Reference email}, Path=Text , Converter={StaticResource EmailConverter},ConverterParameter={x:Reference emailError}}" 
+                                         Value="False">
+                                </BindingCondition>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="IsVisible" Value="True" />
+                        </MultiTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Email}" x:Name="email" Style="{StaticResource EntryStyle}"></Entry>
+
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="Start" Text="Comments" Style="{StaticResource LableStyle}"></Label>
+                <Label HorizontalOptions="Start" Margin="-5,0,0,5"  Text="*" TextColor="Red"/>
+            </StackLayout>
+                <Label 
+                    Text="Comment Required"
+                    x:Name="commentError" 
+                    TextColor="Red"
+                    IsVisible="False">
+                    <Label.Triggers>
+                        <MultiTrigger TargetType="Label">
+                            <MultiTrigger.Conditions>
+                                <BindingCondition 
+                                         Binding="{Binding Source={x:Reference comment}, Path=Text , Converter={StaticResource DataHasBeenEnterdConverter},ConverterParameter={x:Reference commentError}}" 
+                                         Value="False">
+                                </BindingCondition>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="IsVisible" Value="True" />
+                        </MultiTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Editor HeightRequest="100" x:Name="comment" BackgroundColor="#FAFAFA" Text="{Binding Comments}" HorizontalOptions="FillAndExpand" ></Editor>
+
+
+            <Label HorizontalOptions="StartAndExpand" Style="{StaticResource LableStyle}" Margin="0,10,0,0" Text="COMMUNICATION PREFERENCES" FontSize="18"></Label>
+            <!-- Preference Section-->
+            <StackLayout
+                    HorizontalOptions="Fill"
+                    HeightRequest="50"
+                    Orientation="Horizontal"
+                    BackgroundColor="#EEEEEE">
+                <Image HorizontalOptions="Start" Source="icon_info" HeightRequest="24" WidthRequest="24" Margin="10,0,0,0"></Image>
+                <Label
+                      Text="Email Messages"
+                      TextColor="Black"
+                      FontSize="18"
+                      Margin="6,0,0,0"
+                      VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="StartAndExpand">
+                </Label>
+                <Switch HorizontalOptions="EndAndExpand" Toggled="Handle_Toggled" IsToggled="{Binding IsCheck}" Margin="0,0,6,0" VerticalOptions="CenterAndExpand"></Switch>
+            </StackLayout>
+
+            <Label HorizontalOptions="Fill" TextColor="#BDBDBD" FontSize="16" Text="{Binding PreferenceMessage}"></Label>
+            <Button CornerRadius="10" Command="{Binding SubmitButtonCommand}" Margin="10,10,10,0" FontSize="20" TextColor="White" BackgroundColor="#607D8B" HeightRequest="50" HorizontalOptions="Fill" Text="Submit" />
+           
+        </StackLayout>
+                
+           <ActivityIndicator IsVisible="{Binding IsBusy}"  x:Name="ActivityIndicator" 
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+             AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" IsRunning="{Binding IsBusy}" />
+           
+         </AbsoluteLayout>
+        </ScrollView>
     </ContentPage.Content>
+
 </ContentPage>

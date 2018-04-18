@@ -22,9 +22,7 @@ namespace Salon_Pro_APP.Views
 
         void Handle_Tapped(object sender, System.EventArgs e)
         {
-          //  this.IsPresented = false;
             Application.Current.MainPage = new HomePage() { Detail = new NavigationPage(new DashboardPage()) };
-
         }
         void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
@@ -67,8 +65,10 @@ namespace Salon_Pro_APP.Views
                 Detail = new NavigationPage(new Link_7());
                 IsPresented = false;
             }
-            else if ((person.Title).Equals("Log Out"))
+            else if ((person.Title).Equals(ApplicationConstant.LinkFeedbackMenuTitle))
             {
+                Detail = new NavigationPage(new FeedbackPage());
+                //Detail = new NavigationPage(new FeedbackSentPage());
                 IsPresented = false;
             }
             else

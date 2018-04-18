@@ -15,6 +15,7 @@ using System.Text;
 using Salon_Pro_APP.Constants;
 using Xamarin.Forms;
 
+
 namespace Salon_Pro_APP.Droid
 {
     [Activity(Label = "DE Salon Pro", Icon = "@drawable/ic_launcher", Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -32,9 +33,9 @@ namespace Salon_Pro_APP.Droid
             CachedImageRenderer.Init(true);
             var ignore1 = typeof(CircleTransformation);
             app = new App();
-            MessagingCenter.Subscribe<App, string>(app, "EmailEvent", (s, error) =>
+            MessagingCenter.Subscribe<App, string>(app, "EmailEvent", (s, data) =>
             {
-                SendFeedbackEmail(error);
+                SendFeedbackEmail(data);
             });
             LoadApplication(app);
         }
@@ -44,7 +45,7 @@ namespace Salon_Pro_APP.Droid
             MessagingCenter.Unsubscribe<App, string>(app, "EmailEvent");
         }
 
-        private static void SendFeedbackEmail(string errorMessage)
+        private static void SendFeedbackEmail(string emailBody)
         {
             if (CrossConnectivity.Current.IsConnected)
             {
@@ -54,17 +55,17 @@ namespace Salon_Pro_APP.Droid
                     {
                         Port = ApplicationConstant.EmailPort,
                         Host = ApplicationConstant.EmailHost,
-                        EnableSsl = true,
+                        EnableSsl = false,
                         Timeout = ApplicationConstant.EmailTimeout,
                         DeliveryMethod = SmtpDeliveryMethod.Network,
                         UseDefaultCredentials = false,
                         Credentials = new System.Net.NetworkCredential(ApplicationConstant.EmailAddress, ApplicationConstant.EmailPassword)
                     };
 
-                    var mailAddress = new MailAddress(ApplicationConstant.EmailAddress, "Android App");
+                    var mailAddress = new MailAddress(ApplicationConstant.EmailAddress, "Android APP");
                     var mail = new MailMessage(mailAddress, mailAddress);
                     mail.Subject = ApplicationConstant.AndroidFeedbackEmailSubject;
-                    mail.Body = "This is test email from android";
+                    mail.Body = emailBody;
                     mail.BodyEncoding = UTF8Encoding.UTF8;
                     mail.IsBodyHtml = true;
                     mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
@@ -73,14 +74,21 @@ namespace Salon_Pro_APP.Droid
                 }
                 catch (Exception ex)
                 {
-                    MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
-                    Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "Close");
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
+                        Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "Close");
+                    });
+                   
                 }
             }
             else
             {
-                MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
-                Xamarin.Forms.Application.Current.MainPage.DisplayAlert("No Internet!", "Please check your internet settings and then try again.", "Close");
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "EmailStatusEvent", false);
+                    Xamarin.Forms.Application.Current.MainPage.DisplayAlert("No Internet!", "Please check your internet settings and then try again.", "Close");
+                });
             }
 
         }

@@ -69,6 +69,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FeedbackSentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -118,6 +122,13 @@
     <Compile Include="Views\FeedbackPage.xaml.cs">
       <DependentUpon>FeedbackPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\FeedbackViewModel.cs" />
+    <Compile Include="Convertors\EmailValidationConvertor.cs" />
+    <Compile Include="Convertors\DataHasEnteredConvertor.cs" />
+    <Compile Include="Views\FeedbackSentPage.xaml.cs">
+      <DependentUpon>FeedbackSentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\FeedbackSentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">
@@ -184,6 +195,7 @@
     <Folder Include="CustomRenderers\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Constants\" />
+    <Folder Include="Convertors\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

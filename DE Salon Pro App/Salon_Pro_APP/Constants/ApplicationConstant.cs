@@ -15,7 +15,7 @@ namespace Salon_Pro_APP.Constants
         public static string AndroidFeedbackEmailSubject = "AppNameHere|Android|Feedback";
         #endregion
 
-        public static string BackgroundColor = "#f4dc42";
+        public static string BackgroundColor = "#f4dc42";//background color of the app
 
 
         #region URLs
@@ -37,10 +37,13 @@ namespace Salon_Pro_APP.Constants
         public static string Link5MenuTitle = "Link 5";
         public static string Link6MenuTitle = "Link 6";
         public static string Link7MenuTitle = "Link 7";
+        public static string LinkFeedbackMenuTitle = "Feedback";
+       
         #endregion
 
         #region hamburger menu icons
         public static string DashboardLinkMenuIcon = "buy_de_products_menu.png";
+
         public static string Link1MenuIcon = "buy_de_products_menu.png";
         public static string Link2MenuIcon = "knowlage_video_menu.png";
         public static string Link3MenuIcon = "classes_events_video_menu.png";
@@ -48,10 +51,12 @@ namespace Salon_Pro_APP.Constants
         public static string Link5MenuIcon = "pro_box_menu.png";
         public static string Link6MenuIcon = "partner_menu.png";
         public static string Link7MenuIcon = "partner_menu.png";
+        public static string LinkFeedbackMenuIcon = "partner_menu.png";
         #endregion
 
         #region MainDashBoard images
         public static string DashboardPageBGImage = "homebackground.png";
+
         public static string DashboardImageHolder1 = "home_image_holder_1";
         public static string DashboardImageHolder2 = "home_image_holder_2";
         public static string DashboardImageHolder3 = "home_image_holder_3";
@@ -59,7 +64,12 @@ namespace Salon_Pro_APP.Constants
         public static string DashboardImageHolder5 = "home_image_holder_5";
         public static string DashboardImageHolder6 = "home_image_holder_6";
         public static string DashboardImageHolder7 = "home_image_holder_6";
+        #endregion
 
+        #region Feedback 
+        public static string PhoneNumber = "(800) 473-2825";
+        public static string FeedbackPreference = "Would you like to receive information and promotional email" +
+            " messages from Great Clips? You may unsubscribe at any time";
         #endregion
 
     }

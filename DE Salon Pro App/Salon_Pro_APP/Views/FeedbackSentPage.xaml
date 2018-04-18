@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+              Title="Feedback Sent"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salon_Pro_APP.Views.FeedbackSentPage">
+    <ContentPage.Content>
+         <StackLayout 
+           BackgroundColor="White"
+            Orientation="Vertical" 
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+
+            <StackLayout Margin="0,100,0,0" HorizontalOptions="CenterAndExpand"  Orientation="Vertical" >
+                 <Label Text="Success!" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25" HorizontalOptions="CenterAndExpand"></Label>
+                 <Label Margin="20,10,20,0" Text="Your feedback has been successfully submitted." VerticalTextAlignment="Center" TextColor="Black" FontSize="18" HorizontalOptions="StartAndExpand"></Label>
+                 <Label Margin="20,10,30,0" Text="Your comments help us to deliver a great experience every time you visit our salons." VerticalTextAlignment="Center"  
+                        TextColor="Black" FontSize="18" HorizontalOptions="StartAndExpand"></Label>
+
+                <StackLayout Margin="20,10,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+                <Label Text= "Need more help?" VerticalTextAlignment="Center"  
+                        TextColor="Black" FontSize="18" HorizontalOptions="StartAndExpand"></Label>
+                 <Label Text= "Give us a call." VerticalTextAlignment="Center"  
+                    TextColor="Black" FontSize="18" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                </StackLayout>
+
+                <StackLayout Margin="0,20,0,0" HorizontalOptions="CenterAndExpand"  Orientation="Horizontal" >
+                    <Image HorizontalOptions="Center" Source="icon_call" HeightRequest="30" WidthRequest="30"></Image>
+                    <Label Text="{Binding PhoneNumber}" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Red" FontSize="22" HorizontalOptions="StartAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CallCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                   
+                </StackLayout>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -9,6 +9,7 @@ namespace Salon_Pro_APP
             InitializeComponent();
 
             MainPage = new Views.HomePage();
+            //MainPage = new Views.FeedbackPage();
         }
 
         protected override void OnStart()

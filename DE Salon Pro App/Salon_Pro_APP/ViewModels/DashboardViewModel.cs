@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Plugin.Messaging;
 using Salon_Pro_APP.Constants;
 using Salon_Pro_APP.Views;
 using Xamarin.Forms;
@@ -27,9 +28,7 @@ namespace Salon_Pro_APP.ViewModels
             SetupLinks();
             Link1Command = new Command((e) =>
             {
-                Device.OpenUri(new Uri("tel:038773729"));
-                //_navigation.PushAsync(new Link_1());
-
+                _navigation.PushAsync(new Link_1());
             });
             Link2Command = new Command((e) =>
             {
