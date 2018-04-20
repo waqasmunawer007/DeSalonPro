@@ -1,23 +1,21 @@
 ﻿<Properties StartupConfiguration="{125436C7-2B8D-4E0B-BA33-5E240A11D8A9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Salon_Pro_APP/Views/HomePage.xaml">
     <Files>
       <File FileName="iOS/AppDelegate.cs" Line="10" Column="31" />
+      <File FileName="Salon_Pro_APP/Views/HomePage.xaml" Line="45" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node />
-          <Node name="Salon_Pro_APP" expanded="True" selected="True">
+          <Node name="Salon_Pro_APP" expanded="True">
             <Node name="Salon_Pro_APP" expanded="True">
               <Node name="Constants" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="FeedbackPage.xaml" expanded="True" />
-                <Node name="FeedbackSentPage.xaml" expanded="True" />
+                <Node name="HomePage.xaml" expanded="True" selected="True" />
+                <Node name="Link_7.xaml" expanded="True" />
+                <Node name="Link_8.xaml" expanded="True" />
               </Node>
-            </Node>
-            <Node name="Salon_Pro_APP.Droid" expanded="True">
-              <Node name="Resources" expanded="True" />
             </Node>
             <Node name="Salon_Pro_APP.iOS" expanded="True" />
           </Node>

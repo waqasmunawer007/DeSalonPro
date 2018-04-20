@@ -77,6 +77,14 @@
                                 </Image.GestureRecognizers>
                                 </Image>
                             </StackLayout>
+
+                            <StackLayout  Grid.Column="1" Grid.Row="3"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                 <Image  Source="{Binding Link8Image}" WidthRequest="200" HeightRequest="200">
+                                    <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link8Command}" />
+                                </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
                                                
                         </Grid>
                

@@ -17,8 +17,10 @@ namespace Salon_Pro_APP.ViewModels
         public Command Link5Command { get; set; }
         public Command Link6Command { get; set; }
         public Command Link7Command { get; set; }
+        public Command Link8Command { get; set; }
        
-        private string _mainTitle,_link1Image, _link2Image, _link3Image, _link4Image, _link5Image, _link6Image, _link7Image;
+        private string _mainTitle,_link1Image, _link2Image, _link3Image, _link4Image, _link5Image, 
+        _link6Image, _link7Image,_link8Image;
         private string _bgImage;
         INavigation _navigation;
 
@@ -54,6 +56,10 @@ namespace Salon_Pro_APP.ViewModels
             {
                 _navigation.PushAsync(new Link_7());
             });
+            Link8Command = new Command((e) =>
+            {
+                _navigation.PushAsync(new Link_8());
+            });
 
            
         }
@@ -69,6 +75,7 @@ namespace Salon_Pro_APP.ViewModels
             Link5Image = ApplicationConstant.DashboardImageHolder5;
             Link6Image = ApplicationConstant.DashboardImageHolder6;
             Link7Image = ApplicationConstant.DashboardImageHolder7;
+            Link8Image = ApplicationConstant.DashboardImageHolder8;
            
         }
         #region Properties
@@ -153,6 +160,15 @@ namespace Salon_Pro_APP.ViewModels
             {
                 _link7Image = value;
                 OnPropertyChanged("Link7Image");
+            }
+        }
+        public string Link8Image
+        {
+            get { return _link8Image; }
+            set
+            {
+                _link8Image = value;
+                OnPropertyChanged("Link8Image");
             }
         }
 

@@ -26,6 +26,7 @@ namespace Salon_Pro_APP.Constants
         public static string Link5WebUrl = "https://desalonpro.com/probox/";
         public static string Link6WebUrl = "https://desalonpro.com/partners/";
         public static string Link7WebUrl = "https://desalonpro.com/wp-login.php";
+        public static string Link8WebUrl = "https://desalonpro.com/wp-login.php";
         #endregion
 
         #region hamburger menu titles
@@ -37,6 +38,7 @@ namespace Salon_Pro_APP.Constants
         public static string Link5MenuTitle = "Link 5";
         public static string Link6MenuTitle = "Link 6";
         public static string Link7MenuTitle = "Link 7";
+        public static string Link8MenuTitle = "Link 8";
         public static string LinkFeedbackMenuTitle = "Feedback";
        
         #endregion
@@ -51,6 +53,7 @@ namespace Salon_Pro_APP.Constants
         public static string Link5MenuIcon = "pro_box_menu.png";
         public static string Link6MenuIcon = "partner_menu.png";
         public static string Link7MenuIcon = "partner_menu.png";
+        public static string Link8MenuIcon = "partner_menu.png";
         public static string LinkFeedbackMenuIcon = "partner_menu.png";
         #endregion
 
@@ -64,6 +67,7 @@ namespace Salon_Pro_APP.Constants
         public static string DashboardImageHolder5 = "home_image_holder_5";
         public static string DashboardImageHolder6 = "home_image_holder_6";
         public static string DashboardImageHolder7 = "home_image_holder_6";
+        public static string DashboardImageHolder8 = "home_image_holder_6";
         #endregion
 
         #region Feedback 

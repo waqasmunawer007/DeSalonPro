@@ -73,6 +73,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Link_8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -129,6 +133,10 @@
       <DependentUpon>FeedbackSentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\FeedbackSentViewModel.cs" />
+    <Compile Include="Views\Link_8.xaml.cs">
+      <DependentUpon>Link_8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Link8ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">

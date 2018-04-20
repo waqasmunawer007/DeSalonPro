@@ -65,6 +65,11 @@ namespace Salon_Pro_APP.Views
                 Detail = new NavigationPage(new Link_7());
                 IsPresented = false;
             }
+            else if ((person.Title).Equals(ApplicationConstant.Link8MenuTitle))
+            {
+                Detail = new NavigationPage(new Link_8());
+                IsPresented = false;
+            }
             else if ((person.Title).Equals(ApplicationConstant.LinkFeedbackMenuTitle))
             {
                 Detail = new NavigationPage(new FeedbackPage());
