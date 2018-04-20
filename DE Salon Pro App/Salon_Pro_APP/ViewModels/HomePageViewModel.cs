@@ -23,9 +23,9 @@ namespace Salon_Pro_APP.ViewModels
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link3MenuTitle, ImagePath = ApplicationConstant.Link3MenuIcon });
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link4MenuTitle, ImagePath = ApplicationConstant.Link4MenuIcon });
             DataSourceList.Add(new Data() { Title = ApplicationConstant.Link5MenuTitle, ImagePath = ApplicationConstant.Link5MenuIcon });
-            DataSourceList.Add(new Data() { Title = ApplicationConstant.Link6MenuTitle, ImagePath = ApplicationConstant.Link6MenuIcon });
-            DataSourceList.Add(new Data() { Title = ApplicationConstant.Link7MenuTitle, ImagePath = ApplicationConstant.Link7MenuIcon });
-            DataSourceList.Add(new Data() { Title = ApplicationConstant.Link8MenuTitle, ImagePath = ApplicationConstant.Link8MenuIcon });
+           // DataSourceList.Add(new Data() { Title = ApplicationConstant.Link6MenuTitle, ImagePath = ApplicationConstant.Link6MenuIcon });
+           // DataSourceList.Add(new Data() { Title = ApplicationConstant.Link7MenuTitle, ImagePath = ApplicationConstant.Link7MenuIcon });
+           // DataSourceList.Add(new Data() { Title = ApplicationConstant.Link8MenuTitle, ImagePath = ApplicationConstant.Link8MenuIcon });
             DataSourceList.Add(new Data() { Title = ApplicationConstant.LinkFeedbackMenuTitle, ImagePath = ApplicationConstant.LinkFeedbackMenuIcon });
           
         }
