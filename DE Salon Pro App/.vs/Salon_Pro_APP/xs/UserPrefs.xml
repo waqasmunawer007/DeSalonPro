@@ -1,25 +1,14 @@
-﻿<Properties StartupConfiguration="{125436C7-2B8D-4E0B-BA33-5E240A11D8A9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Salon_Pro_APP/ViewModels/HomePageViewModel.cs">
-    <Files>
-      <File FileName="../../new-20for2/20for2/MapServices/PlacesAPIs/PlaceAPIService.cs" Line="33" Column="1" />
-      <File FileName="../../new-20for2/20for2/20for2/Views/SearchPage.xaml.cs" Line="33" Column="102" />
-      <File FileName="../../new-20for2/20for2/20for2/ViewModels/PlaceDetailPageViewModel.cs" Line="56" Column="32" />
-      <File FileName="Salon_Pro_APP/ViewModels/HomePageViewModel.cs" Line="28" Column="14" />
-    </Files>
+﻿<Properties StartupConfiguration="{FA9819E5-FB5F-48D1-B72A-483AA0229A3D}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="20for2" expanded="True">
-            <Node name="MapServices" expanded="True">
-              <Node name="PlacesAPIs" expanded="True" />
-            </Node>
-          </Node>
-          <Node name="Salon_Pro_APP" expanded="True">
+          <Node name="Salon_Pro_APP" expanded="True" selected="True">
             <Node name="Salon_Pro_APP" expanded="True">
-              <Node name="ViewModels" expanded="True">
-                <Node name="HomePageViewModel.cs" selected="True" />
-              </Node>
+              <Node name="Constants" expanded="True" />
             </Node>
+            <Node name="Salon_Pro_APP.Droid" expanded="True" />
+            <Node name="Salon_Pro_APP.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -32,6 +21,7 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Salon__Pro__APP.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.5BC23DEC-238C-4049-9AD9-555170717FF7" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Salon__Pro__APP.Droid PreferredExecutionTarget="Android.4_WVGA_Nexus_S_API_16" />
+  <MonoDevelop.Ide.ItemProperties.Salon__Pro__APP.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Pixel_API_24_2" />
 </Properties>

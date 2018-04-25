@@ -77,6 +77,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -137,6 +141,9 @@
       <DependentUpon>Link_8.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Link8ViewModel.cs" />
+    <Compile Include="Views\DashboardTabbedPage.xaml.cs">
+      <DependentUpon>DashboardTabbedPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">

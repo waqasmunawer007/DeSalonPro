@@ -5,12 +5,13 @@ using Xamarin.Forms;
 
 namespace Salon_Pro_APP.ViewModels
 {
-    public class Link1ViewModel: INotifyPropertyChanged
+    public class Link1ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private bool _isBusy;
         private string _webURL;
         private string _title;
+        private string _tabIcon;
         private string _backgroundColor;
 
         public Link1ViewModel()
@@ -19,6 +20,7 @@ namespace Salon_Pro_APP.ViewModels
             IsBusy = true;
             Title = ApplicationConstant.Link1MenuTitle;
             BackgroundColor = ApplicationConstant.BackgroundColor;
+            TabIcon = ApplicationConstant.tab1Icon;
         }
         #region Properties
         public bool IsBusy
@@ -37,6 +39,15 @@ namespace Salon_Pro_APP.ViewModels
             {
                 _backgroundColor = value;
                 OnPropertyChanged("BackgroundColor");
+            }
+        }
+        public string TabIcon
+        {
+            get { return _tabIcon; }
+            set
+            {
+                _tabIcon = value;
+                OnPropertyChanged("TabIcon");
             }
         }
         public string Title

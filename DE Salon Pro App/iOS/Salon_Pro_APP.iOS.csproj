@@ -219,6 +219,8 @@
     <BundleResource Include="Resources\home_image_holder_6.png" />
     <BundleResource Include="Resources\icon_call%402x.png" />
     <BundleResource Include="Resources\icon_info%402x.png" />
+    <BundleResource Include="Resources\help_white_icon.png" />
+    <BundleResource Include="Resources\ic_info.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

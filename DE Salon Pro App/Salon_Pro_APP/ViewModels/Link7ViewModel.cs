@@ -4,13 +4,14 @@ using Salon_Pro_APP.Constants;
 
 namespace Salon_Pro_APP.ViewModels
 {
-    public class Link7ViewModel: INotifyPropertyChanged
+    public class Link7ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private bool _isBusy;
         private string _webUrl;
         private string _title;
         private string _backgroundColor;
+        private string _tabIcon;
 
         public Link7ViewModel()
         {
@@ -18,9 +19,19 @@ namespace Salon_Pro_APP.ViewModels
             IsBusy = true;
             Title = ApplicationConstant.Link7MenuTitle;
             BackgroundColor = ApplicationConstant.BackgroundColor;
+            TabIcon = ApplicationConstant.tab7Icon;
         }
 
         #region Properties
+        public string TabIcon
+        {
+            get { return _tabIcon; }
+            set
+            {
+                _tabIcon = value;
+                OnPropertyChanged("TabIcon");
+            }
+        }
         public string BackgroundColor
         {
             get { return _backgroundColor; }

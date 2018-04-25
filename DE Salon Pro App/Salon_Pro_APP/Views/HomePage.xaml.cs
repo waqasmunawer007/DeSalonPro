@@ -22,7 +22,7 @@ namespace Salon_Pro_APP.Views
 
         void Handle_Tapped(object sender, System.EventArgs e)
         {
-            Application.Current.MainPage = new HomePage() { Detail = new NavigationPage(new DashboardPage()) };
+            Application.Current.MainPage = new HomePage() { Detail = new NavigationPage(new DashboardTabbedPage()) };
         }
         void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
@@ -78,7 +78,7 @@ namespace Salon_Pro_APP.Views
             }
             else
             {
-                Detail = new NavigationPage(new DashboardPage());
+                Detail = new NavigationPage(new DashboardTabbedPage());
                 IsPresented = false;
             }
             mlist.SelectedItem = null;

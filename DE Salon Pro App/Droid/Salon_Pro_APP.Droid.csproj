@@ -233,6 +233,8 @@
     <AndroidResource Include="Resources\drawable\home_image_holder_6.png" />
     <AndroidResource Include="Resources\drawable\icon_call.png" />
     <AndroidResource Include="Resources\drawable\icon_info.png" />
+    <AndroidResource Include="Resources\drawable\help_white_icon.png" />
+    <AndroidResource Include="Resources\drawable\ic_info.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
