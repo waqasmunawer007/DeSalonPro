@@ -20,7 +20,7 @@ namespace Salon_Pro_APP.ViewModels
         public Command Link8Command { get; set; }
        
         private string _mainTitle,_link1Image, _link2Image, _link3Image, _link4Image, _link5Image, 
-        _link6Image, _link7Image,_link8Image;
+        _link6Image, _link7Image,_link8Image,_logoImage;
         private string _bgImage;
         INavigation _navigation;
 
@@ -66,6 +66,7 @@ namespace Salon_Pro_APP.ViewModels
         private void SetupLinks()
         {
             BackgroundImage = ApplicationConstant.DashboardPageBGImage;
+            LogoImage = ApplicationConstant.DashboarBrandLogo;
             MainTitle = ApplicationConstant.DashboardPageMenuTitle;
           
             Link1Image = ApplicationConstant.DashboardImageHolder1;
@@ -95,6 +96,16 @@ namespace Salon_Pro_APP.ViewModels
             {
                 _mainTitle = value;
                 OnPropertyChanged("MainTitle");
+            }
+        }
+
+        public string LogoImage
+        {
+            get { return _logoImage; }
+            set
+            {
+                _logoImage = value;
+                OnPropertyChanged("LogoImage");
             }
         }
 

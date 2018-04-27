@@ -57,21 +57,10 @@ namespace Salon_Pro_APP.Constants
         public static string LinkFeedbackMenuIcon = "partner_menu.png";
         #endregion
 
-        #region tabs menu icons
-        public static string tab1Icon = "ic_info";
-        public static string tab2Icon = "ic_info";
-        public static string tab3Icon = "ic_info";
-        public static string tab4Icon = "ic_info";
-        public static string tab5Icon = "ic_info";
-        public static string tab6Icon = "ic_info";
-        public static string tab7Icon = "ic_info";
-        public static string tab8Icon = "ic_info";
-
-        #endregion
-
-
         #region MainDashBoard images
         public static string DashboardPageBGImage = "homebackground.png";
+        public static string DashboarBrandLogo = "branding"; //for new tabbed based home page design
+
 
         public static string DashboardImageHolder1 = "home_image_holder_1";
         public static string DashboardImageHolder2 = "home_image_holder_2";
@@ -81,6 +70,8 @@ namespace Salon_Pro_APP.Constants
         public static string DashboardImageHolder6 = "home_image_holder_6";
         public static string DashboardImageHolder7 = "home_image_holder_6";
         public static string DashboardImageHolder8 = "home_image_holder_6";
+
+       
         #endregion
 
         #region Feedback 

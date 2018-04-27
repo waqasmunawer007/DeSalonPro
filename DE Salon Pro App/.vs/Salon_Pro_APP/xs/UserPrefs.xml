@@ -1,14 +1,34 @@
 ﻿<Properties StartupConfiguration="{FA9819E5-FB5F-48D1-B72A-483AA0229A3D}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Salon_Pro_APP/ViewModels/Link1ViewModel.cs">
+    <Files>
+      <File FileName="Salon_Pro_APP/ViewModels/DashboardViewModel.cs" Line="69" Column="22" />
+      <File FileName="Salon_Pro_APP/ViewModels/Link1ViewModel.cs" Line="23" Column="43" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Salon_Pro_APP" expanded="True" selected="True">
+          <Node name="Salon_Pro_APP" expanded="True">
             <Node name="Salon_Pro_APP" expanded="True">
               <Node name="Constants" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Link1ViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="DashboardPage.xaml" expanded="True" />
+                <Node name="DashboardTabbedPage.xaml" expanded="True" />
+                <Node name="Link_1.xaml" expanded="True" />
+                <Node name="Link_2.xaml" expanded="True" />
+                <Node name="Link_3.xaml" expanded="True" />
+                <Node name="Link_4.xaml" expanded="True" />
+                <Node name="Link_5.xaml" expanded="True" />
+                <Node name="Link_6.xaml" expanded="True" />
+                <Node name="Link_7.xaml" expanded="True" />
+                <Node name="Link_8.xaml" expanded="True" />
+              </Node>
             </Node>
-            <Node name="Salon_Pro_APP.Droid" expanded="True" />
-            <Node name="Salon_Pro_APP.iOS" expanded="True" />
+            <Node name="Salon_Pro_APP.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

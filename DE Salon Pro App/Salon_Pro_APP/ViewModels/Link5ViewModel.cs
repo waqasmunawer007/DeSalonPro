@@ -11,27 +11,17 @@ namespace Salon_Pro_APP.ViewModels
         private string _webURL;
         private string _title;
         private string _backgroundColor;
-        private string _tabIcon;
-
+       
         public Link5ViewModel()
         {
             WebURL = ApplicationConstant.Link5WebUrl;
             IsBusy = true;
             Title = ApplicationConstant.Link5MenuTitle;
             BackgroundColor = ApplicationConstant.BackgroundColor;
-            TabIcon = ApplicationConstant.tab5Icon;
-
+           
         }
         #region Properties
-        public string TabIcon
-        {
-            get { return _tabIcon; }
-            set
-            {
-                _tabIcon = value;
-                OnPropertyChanged("TabIcon");
-            }
-        }
+
         public bool IsBusy
         {
             get { return _isBusy; }

@@ -10,7 +10,7 @@ namespace Salon_Pro_APP.ViewModels
         private bool _isBusy;
         private string _webURL;
         private string _title;
-        private string _tabIcon;
+       
         private string _backgroundColor;
 
         public Link3ViewModel()
@@ -19,19 +19,11 @@ namespace Salon_Pro_APP.ViewModels
             Title = ApplicationConstant.Link3MenuTitle;
             BackgroundColor = ApplicationConstant.BackgroundColor;
             IsBusy = true;
-            TabIcon = ApplicationConstant.tab3Icon;
+           
         }
 
         #region Properties
-        public string TabIcon
-        {
-            get { return _tabIcon; }
-            set
-            {
-                _tabIcon = value;
-                OnPropertyChanged("TabIcon");
-            }
-        }
+
         public bool IsBusy
         {
             get { return _isBusy; }

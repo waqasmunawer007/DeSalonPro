@@ -2,12 +2,12 @@
 <ContentPage Title="{Binding Title}" xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:local="clr-namespace:Salon_Pro_APP.CustomRenderers"
-          Icon="{Binding TabIcon}"
+         
         x:Class="Salon_Pro_APP.Views.Link_1">
     <ContentPage.Content>
         
     </ContentPage.Content>
-	<!--<AbsoluteLayout>
+	<AbsoluteLayout>
         <StackLayout BackgroundColor="{Binding BackgroundColor}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  />
 
         <local:HybridWebView BackgroundColor="{Binding BackgroundColor}" x:Name="hybridWebView" Uri="{Binding WebURL}"
@@ -17,5 +17,5 @@
         <ActivityIndicator IsVisible="{Binding IsBusy}"  x:Name="ActivityIndicator" 
              AbsoluteLayout.LayoutFlags="PositionProportional"
              AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" IsRunning="{Binding IsBusy}" />
-    </AbsoluteLayout>-->
+    </AbsoluteLayout>
 </ContentPage>

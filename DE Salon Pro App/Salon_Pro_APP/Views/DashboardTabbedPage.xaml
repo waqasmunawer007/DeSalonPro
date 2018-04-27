@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Salon_Pro_APP.Views.DashboardTabbedPage">
+     <ContentPage.Content>
+        <ScrollView>
+          <AbsoluteLayout>
+                <Image Source="{Binding BackgroundImage}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill" />
+                <Grid Margin="0,5,0,0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-</TabbedPage>
+                            <Image Grid.Column="0" Grid.Row="0"  Source="{Binding LogoImage}" Aspect="AspectFill" HeightRequest="100" HorizontalOptions="FillAndExpand">
+                                 
+                            </Image>
+                    
+                            <Image Grid.Column="0" Grid.Row="1" Margin="0,10,0,0"  Source="{Binding Link1Image}" Aspect="AspectFill" HeightRequest="150" HorizontalOptions="FillAndExpand">
+                                 <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding Link1Command}" />
+                            </Image.GestureRecognizers>
+                            </Image>
+
+                           <Image  Grid.Column="0" Grid.Row="2" Source="{Binding Link2Image}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link2Command}" />
+                                </Image.GestureRecognizers>
+                           </Image>
+                      
+                            <Image  Grid.Column="0" Grid.Row="3"  Source="{Binding Link3Image}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                 <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link3Command}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                           
+                            <Image  Grid.Column="0" Grid.Row="4" Source="{Binding Link4Image}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                 <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link4Command}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                    
+                           <Image  Grid.Column="0" Grid.Row="5" Source="{Binding Link5Image}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                 <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link5Command}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                   
+                            <Image  Grid.Column="0" Grid.Row="6"  Source="{Binding Link6Image}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link6Command}" />
+                            </Image.GestureRecognizers>
+                            </Image>
+
+                             <Image  Grid.Column="0" Grid.Row="7" Aspect="AspectFill"  Source="{Binding Link7Image}" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link7Command}" />
+                            </Image.GestureRecognizers>
+                            </Image>
+                         
+                             <Image Grid.Column="0" Grid.Row="8" Aspect="AspectFill"  Source="{Binding Link8Image}" HorizontalOptions="FillAndExpand" HeightRequest="150">
+                                <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"  Command="{Binding Link8Command}" />
+                            </Image.GestureRecognizers>
+                            </Image>
+                  
+                        </Grid>
+               
+            </AbsoluteLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
